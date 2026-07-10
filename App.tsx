@@ -5,6 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StyleSheet } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { AuthProvider } from './src/context/AuthContext';
 import AppNavigator from './src/navigation/AppNavigator';
 
@@ -25,6 +26,7 @@ export default function App() {
           <AppNavigator />
         </AuthProvider>
         <StatusBar style="dark" />
+        <SpeedInsights />
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
